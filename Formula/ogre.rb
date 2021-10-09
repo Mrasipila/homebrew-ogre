@@ -62,9 +62,9 @@ class Ogre < Formula
 
   def install
     cmake_args = [
-      #"-DCMAKE_OSX_ARCHITECTURES='x86_64'",
+      "-DCMAKE_OSX_ARCHITECTURES='x86_64'",
       #"-F/Library/Frameworks/",
-      "-lfreetype",
+      #"-lfreetype",
     ]
     cmake_args << "-DOGRE_BUILD_PLUGIN_CG=OFF" if build.without? "cg"
     cmake_args.concat(std_cmake_args)
